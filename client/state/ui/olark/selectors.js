@@ -35,6 +35,16 @@ export function isRequestingOlark( state ) {
 }
 
 /**
+ * Returns if olark chat is available for the given area
+ * @param   {Object}  state  Global state tree
+ * @param   {object}  area   The chat area to check availability for
+ * @returns {Boolean}        true, when olark is requesting
+ */
+export function isChatAvailable( state, area ) {
+	return !! state.ui.olark.availability[ area ];
+}
+
+/**
  * Returns if olark operators are available.
  * @param   {Object}  state  Global state tree
  * @returns {Boolean}        true, when olark operators are available
